@@ -1,0 +1,31 @@
+$color-black-0: rgb(14, 12, 12);
+$color-grey-0: rgb(85, 75, 75);
+$color-orange-0: rgb(136, 123, 100);
+$color-blue-0: rgb(41, 41, 177);
+$color-linear-0: linear-gradient(to right, #f12711, #f5af19);
+$color-linear-1: linear-gradient(to right, #11998e, #38ef7d);
+$color-linear-reverse-1: linear-gradient(to right, #38ef7d, #11998e);
+$color-linear-logo: linear-gradient(to right, #00b4db, #0083b0);
+$fs-0: 15px;
+$fs-1: 20px;
+$fs-2: 30px;
+$fs-3: 50px;
+$lh-0: 15px;
+$lh-1: 20px;
+$lh-2: 30px;
+$lh-3: 50px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: $fs-0;
+    line-height: $lh-0;
+}
+h1,h2,h3,h4 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
