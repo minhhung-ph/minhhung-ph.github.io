@@ -170,11 +170,10 @@ ul.navbar-nav {
     min-height: 350px;
 }
 
-
-/* #carousel .carousel {
+#carousel .carousel {
     background: url("../images/b1.jpg") no-repeat 0px 0px;
     background-size: cover;
-} */
+}
 
 #carousel .carousel-inner {
     background: rgba(0, 0, 0, 0.37);
@@ -312,14 +311,13 @@ ul.navbar-nav {
     margin: 2em 0;
 }
 
-
-/* #contact {
+#contact {
     background: url("../images/3.jpg") no-repeat 0px 0px;
     background-size: cover;
     text-align: center;
     color: #fff;
     padding: 4em 0;
-} */
+}
 
 #contact h3 {
     font-size: 30px;
@@ -374,11 +372,10 @@ ul.navbar-nav {
     color: #777;
 }
 
-
-/* #services {
+#services {
     background: url("../images/3.jpg") no-repeat 0px 0px;
     background-size: cover;
-} */
+}
 
 #services .section__header h3,
 #services .section__header p {
