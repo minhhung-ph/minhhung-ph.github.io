@@ -563,7 +563,7 @@ footer {
     margin-bottom: 17px;
 }
 
-p.copyright {
+div.copyright {
     padding: 16px 0px;
     background: #272727;
     color: #fff;
