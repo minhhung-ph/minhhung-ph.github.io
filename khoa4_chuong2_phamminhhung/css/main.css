@@ -1382,15 +1382,6 @@ hr {
     text-align: center;
     margin-bottom: 10px;
   }
-  .feature .feature-content .tab-content {
-    display: none;
-  }
-  .feature .feature-content .tab-content h3 {
-    font-size: 24px;
-  }
-  .feature .feature-content .tab-content p {
-    font-size: 14px;
-  }
   .fun-fact {
     display: block;
   }
