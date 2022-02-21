@@ -1,6 +1,7 @@
 import Swiper from "https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js";
 import * as OnscrollAnimate from "./Onscroll.js";
 import * as FeatureboxAnimate from "./FeatureBox.js"
+let menu_btn = document.querySelector('.navlink-btn');
 OnscrollAnimate.turnNavbarToSticky();
 OnscrollAnimate.animateParallax();
 window.onscroll = () => {
@@ -53,4 +54,7 @@ const swiper2 = new Swiper(".testimonial2_swiper", {
             slidesPerView: 5
         }
     }
+})
+menu_btn.addEventListener('click', () => {
+    document.querySelector('.navlink-list').classList.toggle('display-navlink');
 })
