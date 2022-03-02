@@ -28,7 +28,7 @@ function animateParallax() {
 }
 
 function showBackToTopBtn() {
-    if (document.body.scrollTop >= 380) {
+    if (document.body.scrollTop >= 150) {
         backToTop_btn.classList.add('btn-appear');
     } else {
         backToTop_btn.classList.remove('btn-appear');
@@ -39,7 +39,7 @@ function slideToTop() {
     backToTop_btn.addEventListener("click", () => {
         console.log('click')
         window.scrollTo({
-            top: 5,
+            top: 0,
             behavior: "smooth"
         });
     })

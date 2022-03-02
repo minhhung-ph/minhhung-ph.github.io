@@ -1,22 +1,97 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tổng hợp các pet project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <style>
         * {
+            font-family: 'IBM Plex Serif', serif;
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            letter-spacing: 1px;
+        }
+        
+        .row {
+            position: relative;
+            z-index: 100;
         }
         
         body {
             width: 100%;
-            background: #3399ff;
+            background: #fff;
         }
         
+        header {
+            margin: 50px 0;
+        }
+        
+        header>div>div>img {
+            object-fit: cover;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+        
+        header>div>div:nth-child(2)>h2 {
+            color: #2299c5;
+            margin: 30px 0 40px;
+        }
+        
+        header>div>div:nth-child(2)>p>span {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        header>div>div:nth-child(2)>p>span:nth-child(2) {
+            margin-left: 30px;
+        }
+        
+        .time-line h3,
+        .introduce {
+            color: #2299c5;
+            font-size: 24px;
+            line-height: var(--height);
+            margin: 0;
+        }
+        
+        main {
+            margin-bottom: 60px;
+        }
+        
+        .time-line h4 {
+            font-size: 18px;
+            line-height: var(--height);
+            margin: 0;
+        }
+        
+        .time-line h4::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 18px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: grey;
+        }
+        
+        .time-line .row>div:nth-child(2) {
+            border-left: 1px solid #2299c5;
+        }
+        
+        .time-line .row p img {
+            max-height: 500px;
+        }
+        /*         
         .container {
             width: 66%;
             margin: 0 auto;
@@ -32,12 +107,17 @@
             padding: 30px 10px;
             border-radius: 10px;
             color: #fff;
+        } */
+        
+        .introduce {
+            text-align: center;
         }
         
         .introduce__projects {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
+            margin-bottom: 30px;
         }
         
         .introduce__projects>a {
@@ -47,7 +127,7 @@
             border-radius: 10px;
             background-color: rgba(25, 75, 112, 0.89);
             text-decoration: none;
-            transition: all .3s linear;
+            transition: all 0.3s linear;
             z-index: 100;
         }
         
@@ -69,45 +149,46 @@
         }
         
         .circle {
-            position: absolute;
+            position: fixed;
             border-radius: 50%;
-            background: white;
+            background-color: #508fb9;
             animation: ripple 15s infinite;
             box-shadow: 0px 0px 1px 0px #508fb9;
+            z-index: 10;
         }
         
         .small {
             width: 200px;
             height: 200px;
-            left: -100px;
+            right: -100px;
             bottom: -100px;
         }
         
         .medium {
             width: 400px;
             height: 400px;
-            left: -200px;
+            right: -200px;
             bottom: -200px;
         }
         
         .large {
             width: 600px;
             height: 600px;
-            left: -300px;
+            right: -300px;
             bottom: -300px;
         }
         
         .xlarge {
             width: 800px;
             height: 800px;
-            left: -400px;
+            right: -400px;
             bottom: -400px;
         }
         
         .xxlarge {
             width: 1000px;
             height: 1000px;
-            left: -500px;
+            right: -500px;
             bottom: -500px;
         }
         
@@ -143,6 +224,44 @@
             }
         }
         
+        .col-right,
+        .col-left {
+            position: relative;
+            padding: 10px 40px 20px;
+        }
+        
+        .col-right>.icon {
+            position: absolute;
+            left: -20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #508fb9;
+            text-align: center;
+        }
+        
+        .col-right>.icon>i {
+            --height: 40px;
+            font-size: 20px;
+            line-height: var(--height);
+        }
+        
+        footer .row {
+            position: relative;
+            background-color: #000;
+            color: #fff;
+            min-height: 50px;
+            z-index: 100;
+            text-align: center;
+        }
+        
+        footer h4 {
+            font-size: 14px;
+            z-index: 100;
+            line-height: 50px;
+            padding: 0 20px;
+        }
+        
         @media only screen and (max-width: 821px) {
             .introduce__projects>a {
                 width: 40%;
@@ -157,6 +276,22 @@
         }
         
         @media only screen and (max-width: 415px) {
+            .col-right>.icon {
+                margin-left: 40px;
+            }
+            .col-right>.icon+h3 {
+                margin-left: 40px;
+                margin-bottom: 20px
+            }
+            .time-line h4::before {
+                visibility: hidden;
+            }
+            .col-left {
+                padding: 0 0 0 40px;
+            }
+            .col-right {
+                padding: 5px 40px 40px;
+            }
             .introduce__projects>a {
                 width: 100%;
                 height: 30%;
@@ -172,42 +307,163 @@
 </head>
 
 <body>
-    <div class='ripple-background'>
-        <div class='circle xxlarge shade1'></div>
-        <div class='circle xlarge shade2'></div>
-        <div class='circle large shade3'></div>
-        <div class='circle mediun shade4'></div>
-        <div class='circle small shade5'></div>
+    <div class="ripple-background">
+        <div class="circle xxlarge shade1"></div>
+        <div class="circle xlarge shade2"></div>
+        <div class="circle large shade3"></div>
+        <div class="circle mediun shade4"></div>
+        <div class="circle small shade5"></div>
     </div>
     <div class="container">
-        <h2 class="introduce">Các pet project nhỏ đã làm</h2>
-        <div class="introduce__projects">
-            <a href="./combo2_chuong4_PhamMinhHung/index.html">
-                <img class="project-image" src="./img/p1.png" alt="project1">
-                <div class="project-description">
-                    chưa resposive HTML, CSS dùng thêm boostrap, thư viện animation
+        <header>
+            <div class="row">
+                <div class="col-left col-lg-3 col-sm-12 text-sm-center">
+                    <img src="./img/avt.jpg" alt="avatar">
+                </div>
+                <div class="col-right col-lg-9 col-sm-12">
+                    <h2>Phạm Minh Hùng</h2>
+                    <p><span>Date of birth: </span>10/01/1995 <span>Phone number: </span>0779582170</p>
+                    <p><span>Address: </span>82 Tân Hải P.13 Q.Tân Bình TP.HCM</p>
+                    <p><span>Email: </span>minhhung.ph1001@gmail.com</p>
+                </div>
+            </div>
+        </header>
+        <main class="time-line">
+            <div class="row">
+                <div class="col-left col-md-3 col-sm-12 text-sm-center">
+                </div>
+                <div class=" col-right col-md-9 col-sm-12 ">
+                    <div class="icon "><i class="fa-solid fa-user "></i></div>
+                    <h3>Profile</h3>
+                    <p>I have graduated from Ho Chi Minh colleges, my major is electrical. After a fews years of work, I would like to change my career path. I have completed Front End foundation course of CyberSoft center. Currenly, learning reactjs to
+                        improve skill.
+                    </p>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-left col-md-3 col-sm-12 text-sm-end ">
+                </div>
+                <div class="col-right col-md-9 col-sm-12 ">
+                    <div class="icon "><i class="fa-solid fa-chalkboard-user "></i></div>
+                    <h3>Learning progress</h3>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-left col-md-3 col-sm-12 text-sm-end ">
+                    <p>09/10/2021</p>
+                </div>
+                <div class="col-right col-md-9 col-sm-12 ">
+                    <h4>HTML5, CSS3, Layout, Flexbox</h4>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-left col-md-3 col-sm-12 text-sm-end ">
+                    <p>10/11/2021</p>
+                </div>
+                <div class="col-right col-md-9 col-sm-12 ">
+                    <h4>Bootstrap and responsive design</h4>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-left col-md-3 col-sm-12 text-sm-end ">
+                    <p>15/11/2021</p>
+                </div>
+                <div class="col-right col-md-9 col-sm-12 ">
+                    <h4>SCSS/SASS</h4>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-left col-md-3 col-sm-12 text-sm-end ">
+                    <p>20/11/2021</p>
+                </div>
+                <div class="col-right col-md-9 col-sm-12 ">
+                    <h4>Javascript, JS DOM, JS OOP</h4>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-left col-md-3 col-sm-12 text-sm-end ">
+                    <p>25/12/2022</p>
+                </div>
+                <div class="col-right col-md-9 col-sm-12 ">
+                    <h4>Javascript ES6</h4>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-left col-md-3 col-sm-12 text-sm-end ">
+                    <p>12/01/2022</p>
+                </div>
+                <div class="col-right col-md-9 col-sm-12 ">
+                    <h4>Ajax Axios ES, API</h4>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-left col-md-3 col-sm-12 text-sm-end ">
+                    <p>30/01/2022</p>
+                </div>
+                <div class="col-right col-md-9 col-sm-12 ">
+                    <h4>Git, Scrum/agile model</h4>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-left col-md-3 col-sm-12 text-sm-end ">
+                    <p>02/03/2022</p>
+                </div>
+                <div class="col-right col-md-9 col-sm-12 ">
+                    <h4>Finish course</h4>
+                    <p><img src="./img/certificate.png" alt=""></p>
+                </div>
+            </div>
+        </main>
+        <h2 class="introduce ">Here are some demo sites I created</h2>
+        <div class="introduce__projects ">
+            <a href="./combo2_chuong4_PhamMinhHung/index.html ">
+                <img class="project-image " src="./img/p1.png " alt="project1 ">
+                <div class="project-description ">
+                    HTML, CSS, boostrap, animation library. No responsive
                 </div>
             </a>
-            <a href="./combo2_chuong_6_PhamMinhHung/index.html">
-                <img class="project-image" src="./img/p2.png" alt="project2">
-                <div class="project-description">
-                    đã có resposive HTML, CSS dùng thêm boostrap, thư viện animation
+            <a href="./combo2_chuong_6_PhamMinhHung/index.html ">
+                <img class="project-image " src="./img/p2.png " alt="project2 ">
+                <div class="project-description ">
+                    HTML, CSS, boostrap, animation library and responsive.
                 </div>
             </a>
-            <a href="./Project_Demo_TinhCuocUber/index.html">
-                <img class="project-image" src="./img/p3.png" alt="project3">
-                <div class="project-description">
-                    chưa responsive Thực hành JS
+            <a href="./Project_Demo_TinhCuocUber/index.html ">
+                <img class="project-image " src="./img/p3.png " alt="project3 ">
+                <div class="project-description ">
+                    Javascript practice. No responsive.
                 </div>
             </a>
-            <a href="./khoa4_chuong2_phamminhhung/index.html">
-                <img class="project-image" src="./img/p4.png" alt="project4">
-                <div class="project-description">
-                    đã responsive HTML, CSS, SCSS tự làm JS
+            <a href="./khoa4_chuong2_phamminhhung/index.html ">
+                <img class="project-image " src="./img/p4.png " alt="project4 ">
+                <div class="project-description ">
+                    HTML, CSS, SCSS, JS and responsive.
                 </div>
             </a>
         </div>
     </div>
+    <footer class="container-fluid">
+        <div class="row">
+            <h4>Thanks you for review my CV. it will be greate if you love my effort to become a developer. Please contact me if you are satified</h4>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
 </body>
 
 </html>
