@@ -63,6 +63,10 @@
             margin: 0;
         }
         
+        .informtion>p:nth-child(2) {
+            display: inline;
+        }
+        
         main {
             margin-bottom: 60px;
         }
@@ -276,6 +280,9 @@
         }
         
         @media only screen and (max-width: 415px) {
+            .informtion>p:nth-child(2) {
+                display: block;
+            }
             .col-right>.icon {
                 margin-left: 40px;
             }
@@ -320,9 +327,10 @@
                 <div class="col-left col-lg-3 col-sm-12 text-sm-center">
                     <img src="./img/avt.jpg" alt="avatar">
                 </div>
-                <div class="col-right col-lg-9 col-sm-12">
+                <div class="col-right col-lg-9 col-sm-12 infomation">
                     <h2>Phạm Minh Hùng</h2>
-                    <p><span>Date of birth: </span>10/01/1995 <span>Phone number: </span>0779582170</p>
+                    <p><span>Date of birth: </span>10/01/1995</p>
+                    <p> <span>Phone number: </span>0779582170</p>
                     <p><span>Address: </span>82 Tân Hải P.13 Q.Tân Bình TP.HCM</p>
                     <p><span>Email: </span>minhhung.ph1001@gmail.com</p>
                 </div>
