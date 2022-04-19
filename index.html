@@ -95,23 +95,6 @@
         .time-line .row p img {
             max-height: 500px;
         }
-        /*         
-        .container {
-            width: 66%;
-            margin: 0 auto;
-        }
-        
-        .container h2 {
-            text-align: center;
-            text-transform: uppercase;
-            background-color: rgba(25, 75, 112, 0.89);
-            backdrop-filter: blur(6px);
-            width: 50%;
-            margin: 50px auto;
-            padding: 30px 10px;
-            border-radius: 10px;
-            color: #fff;
-        } */
         
         .introduce {
             text-align: center;
@@ -123,10 +106,8 @@
             flex-wrap: wrap;
             margin-bottom: 30px;
         }
-        
         .introduce__projects>a {
-            width: 30%;
-            height: 30%;
+            width: 40%;
             margin: 50px 30px;
             border-radius: 10px;
             background-color: rgba(25, 75, 112, 0.89);
@@ -141,11 +122,12 @@
         
         .introduce__projects>a>img {
             width: 100%;
-            height: 200px;
+            height: 300px;
         }
         
         .introduce__projects>a>div {
-            padding: 20px 30px;
+            height: 100px;
+            padding: 20px 20px;
             color: #fff;
             line-height: 1.5;
             letter-spacing: 1px;
@@ -433,41 +415,63 @@
                     <p>02/03/2022</p>
                 </div>
                 <div class="col-right col-md-9 col-sm-12 ">
+                    <h4>ReactJS</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-left col-md-3 col-sm-12 text-sm-end ">
+                    <p>18/04/2022</p>
+                </div>
+                <div class="col-right col-md-9 col-sm-12 ">
                     <h4>Finish course</h4>
-                    <p><img src="./img/certificate.png" alt=""></p>
+                    <p class="pt-2"><img src="./img/certificate.png" alt=""></p>
                 </div>
             </div>
         </main>
-        <h2 class="introduce ">Here are some demo sites I created</h2>
+        <h2 class="introduce ">Main Projects</h2>
+        <div class="introduce__projects">
+            <a href="./khoa4_chuong2_phamminhhung/index.html ">
+                <img class="project-image " src="./img/p4.png " alt="project4 ">
+                <div class="project-description ">
+                    Description: Landing page.<br>
+                    Frontend: HTML, CSS, JS, responsive.
+                </div>
+            </a>
+            <a href="https://cooking-recipes-d6eaf.web.app/">
+                <img class="project-image " src="./img/p6.png " alt="project4 ">
+                <div class="project-description ">
+                    Description: Cooking recipe management.<br>
+                    Frontend: ReactJS, HTML, CSS, JS, responsive.<br>
+                    Backend: firebase.
+                </div>
+            </a>
+        </div>
+        <hr>
+        <h2 class="introduce ">Some demo sites while learning</h2>
         <div class="introduce__projects ">
             <a href="./combo2_chuong4_PhamMinhHung/index.html ">
                 <img class="project-image " src="./img/p1.png " alt="project1 ">
                 <div class="project-description ">
-                    HTML, CSS, boostrap, animation library. No responsive
+                    Description: Practice HTML, CSS, boostrap, animation library<br>
+                    No responsive
                 </div>
             </a>
             <a href="./combo2_chuong_6_PhamMinhHung/index.html ">
                 <img class="project-image " src="./img/p2.png " alt="project2 ">
                 <div class="project-description ">
-                    HTML, CSS, boostrap, animation library and responsive.
+                    Description: Practice HTML, CSS, boostrap, animation library and responsive.
                 </div>
             </a>
             <a href="./Project_Demo_TinhCuocUber/index.html ">
                 <img class="project-image " src="./img/p3.png " alt="project3 ">
                 <div class="project-description ">
-                    Javascript practice. No responsive.
-                </div>
-            </a>
-            <a href="./khoa4_chuong2_phamminhhung/index.html ">
-                <img class="project-image " src="./img/p4.png " alt="project4 ">
-                <div class="project-description ">
-                    HTML, CSS, SCSS, JS and responsive.
+                    Description: Practice Javascript. No responsive.
                 </div>
             </a>
             <a href="./weather_call_api//index.html">
                 <img class="project-image " src="./img/p5.png " alt="project5 ">
                 <div class="project-description ">
-                    practice get and execute API from geometry + openweather
+                    Description: practice get and execute API from geometry + openweather
                 </div>
             </a>
         </div>

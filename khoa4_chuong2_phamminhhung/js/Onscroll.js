@@ -17,7 +17,7 @@ function turnNavbarToSticky() {
 }
 
 function animateParallax() {
-    if (document.body.scrollTop >= 864) {
+    if (document.body.scrollTop >= 1300) {
         progress_bar.style.width = '80%';
         progress_bar1.style.width = '90%';
         progress_bar2.style.width = '70%';
